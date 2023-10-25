@@ -12,3 +12,16 @@ def evenOdd(l):
 l=[10,23,30,49]
 r=evenOdd(l)
 print (r)
+
+# Return a list of smaller element then the given element
+def getSmaller (l,x):
+    s=[]
+    for i in l:
+        if i<x:
+            s.append(i)
+    return(s)
+
+l=[10,20,30,40]    
+x=30
+r=getSmaller (l,x)
+print(r)
