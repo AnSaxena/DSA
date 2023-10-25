@@ -36,3 +36,14 @@ l=[10,20,30,40]
 x=30
 r=getSmaller (l,x)
 print(r)
+
+# Comprehension in python for above code
+# Return a list of smaller element then the given element
+def getSmaller(l,x):
+    s = [i for i in l if i<x]
+    return (s)
+
+l=[10,20,3,4,5,6,22,111]
+x= 10
+r=getSmaller(l,x)
+print(r)
