@@ -74,20 +74,44 @@ def getlargest(l):
         return res
 
 # write own code to find second largest no. in the list 
-def getSmax(l):
+def sLarger(l):
     if len(l)<=1:
         return None
-    else:
-        m= max(l)
-        res=None
-        for i in l:
-            if i!=m:
-                if res == None:
-                    res=i
-                else:
-                    res = max(res,i)
-        return (res)
+    m= max(l)
+    s=None
+    for i in l:
+        if i!=m:
+            if s == None:
+                s=i
+            else:
+                s=max(s,i)
+    return s
 
-l = [6,6,3,3]
-r=getSmax(l)
-print (r)
+#Checking whether the list is sorted or not   
+l = [4, 4]
+res = sLarger(l)
+print(res)
+
+def isSorted(l):
+    if len(l)<= 1:
+        return True
+    else:
+        for i in range(len(l)-1):
+            if l[i]<=l[i+1]:
+                i=i+1
+            else:
+                return False
+        return True
+                
+l=[1,4,1,1,2]
+e=isSorted(l)
+print(e)
+
+
+#Using Sorted function for above code
+def isSorted(l):
+    sl= sorted(l)
+    if sl = l:
+        return True
+    else:
+        return False
